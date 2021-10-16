@@ -27,8 +27,8 @@ public class Payment
 						return "Error while connecting to the database";
 					}
 					// create a prepared statement
-					String query = " insert into payment(`PID`,`pMethod`,`itemName`,`itemPrice`,`Email`)"
-							+ " values (?, ?, ?, ?)";
+					String query = " insert into payment(`PID`,`pMethod`,`itemName`,`itemPrice`,`email`)"
+							+ " values (?, ?, ?, ?, ?)";
 					PreparedStatement preparedStmt = con.prepareStatement(query);
 					// binding values
 					preparedStmt.setInt(1, 0);

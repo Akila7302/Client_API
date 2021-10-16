@@ -78,7 +78,7 @@ public class PaymentAPI extends HttpServlet {
 		// TODO Auto-generated method stub
 		Payment PaymentObj = new Payment();
 		Map paras = getParasMap(request); 
-		 String output = PaymentObj.updatePay(paras.get("PID").toString(), 
+		 String output = PaymentObj.updatePay(paras.get("hidPIDSave").toString(), 
 		 paras.get("pMethod").toString(), 
 		 paras.get("itemName").toString(), 
 		paras.get("itemPrice").toString(),

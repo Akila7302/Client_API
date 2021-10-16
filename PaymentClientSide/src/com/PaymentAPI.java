@@ -94,7 +94,7 @@ public class PaymentAPI extends HttpServlet {
 		// TODO Auto-generated method stub
 		Payment PaymentObj = new Payment();
 		Map paras = getParasMap(request); 
-		 String output = PaymentObj.deletePay(paras.get("PID").toString()); 
+		 String output = PaymentObj.deletePay(paras.get("hidPIDSave").toString()); 
 		response.getWriter().write(output);
 	}
 

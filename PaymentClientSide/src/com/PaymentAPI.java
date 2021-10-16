@@ -40,7 +40,8 @@ public class PaymentAPI extends HttpServlet {
 		Payment PaymentObj = new Payment();
 		String output = PaymentObj.insertPay(request.getParameter("pMethod"), 
 				 request.getParameter("itemName"), 
-				request.getParameter("itemPrice"),  
+				request.getParameter("itemPrice"),
+				request.getParameter("email"));  
 				response.getWriter().write(output);
 	}
 
@@ -80,7 +81,8 @@ public class PaymentAPI extends HttpServlet {
 		 String output = PaymentObj.updatePay(paras.get("PID").toString(), 
 		 paras.get("pMethod").toString(), 
 		 paras.get("itemName").toString(), 
-		paras.get("itemPrice").toString(),  
+		paras.get("itemPrice").toString(),
+		paras.get("email").toString());  
 		response.getWriter().write(output);
 		
 	}
